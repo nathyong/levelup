@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>How To Level Up</title>
+<!-- 2013-10-15 Tue 12:18 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Nathan Yong &lt;u5355375@anu.edu.au&gt;" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+            config: ["MMLorHTML.js"], jax: ["input/TeX"],
+        //  jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">How To Level Up</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Prelude</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Introduction</a></li>
+<li><a href="#sec-1-2">1.2. Sources</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Basics of Number Theory</a></li>
+<li><a href="#sec-3">3. Basics of Linear Algebra</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Vectors</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1. Vector Operations</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2. Vector Spaces</a></li>
+<li><a href="#sec-3-3">3.3. Matrices</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Sequences and Series</a></li>
+<li><a href="#sec-5">5. Single-variable calculus in one dimension (The Basics)</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Continuity in one dimension</a></li>
+<li><a href="#sec-5-2">5.2. Limits in one dimension</a></li>
+<li><a href="#sec-5-3">5.3. Differential Calculus in one dimension</a></li>
+<li><a href="#sec-5-4">5.4. Integral Calculus in one dimension</a></li>
+<li><a href="#sec-5-5">5.5. Intermediate Value Theorem in one dimension</a></li>
+<li><a href="#sec-5-6">5.6. Mean Value Theorem in one dimension</a></li>
+<li><a href="#sec-5-7">5.7. Generalised Mean Value Theorem in one dimension</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Single-variable calculus in multiple dimensions (\(\mathbb{R} \to \mathbb{R}^n\))</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Norm and properties of numbers in \(\mathbb{R}^n\)</a></li>
+<li><a href="#sec-6-2">6.2. Continuity (\(\mathbb{R} \to \mathbb{R}^n\))</a></li>
+<li><a href="#sec-6-3">6.3. Differential Calculus (\(\mathbb{R} \to \mathbb{R}^n\))</a></li>
+<li><a href="#sec-6-4">6.4. Integral Calculus (\(\mathbb{R} \to \mathbb{R}^n\))</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Multi-variable calculus in one dimension</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Arc Length and Curvature</a></li>
+<li><a href="#sec-7-2">7.2. Differentiability \(\mathbb{R}^n \to \mathbb{R}\)</a>
+<ul>
+<li><a href="#sec-7-2-1">7.2.1. Linearity of differentiability</a></li>
+<li><a href="#sec-7-2-2">7.2.2. Chain rule</a></li>
+<li><a href="#sec-7-2-3">7.2.3. Differentiability, again</a></li>
+<li><a href="#sec-7-2-4">7.2.4. Applications of Differentiation (Optimisation)</a></li>
+</ul>
+</li>
+<li><a href="#sec-7-3">7.3. Example</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Advanced Linear Algebra</a>
+<ul>
+<li><a href="#sec-8-1">8.1. Eigenvectors and Eigenvalues</a></li>
+<li><a href="#sec-8-2">8.2. Diagonalisation</a></li>
+<li><a href="#sec-8-3">8.3. Jordan Canonical Form</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+\( \newcommand{\norm}[1]{\lVert #1 \rVert}
+   \newcommand{\abs}[1]{\lvert #1 \rvert}
+\)
+</p>
+
+<p>
+Don't pay attention to the number values. They're liable to change at any time.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Prelude</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Introduction</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+\label{intro}
+</p>
+
+<p>
+Pierre Portal, my first year Calculus/Analysis lecturer, described understanding
+mathematics in several levels, from zero to three.
+</p>
+
+<ul class="org-ul">
+<li>Level Zero: you fell asleep in the lecture, and know nothing.
+</li>
+<li>Level One: you know the formulas, and can apply them to examples.
+</li>
+<li>Level Two: you understand the formula, and have an intuition of why it
+works. You might be able to extend your knowledge of the formula to a related
+use case.
+</li>
+<li>Level Three: you understand the formula from a mathematical level, and you can
+prove it. You might be able to extend your knowledge of the formula to derive
+more complicated proofs and properties of mathematical objects you know
+about.
+</li>
+</ul>
+
+<p>
+That's the title of this book explained. Introductory mathematics courses might
+teach content at Level 1 or Level 2. High achieving high school
+mathematics students might wish to understand content at Level 2. But in order
+to get to serious concepts in maths, it becomes increasingly necessary to
+understand at Level 3. This book is, then, an attempt to help you 'level up'.
+</p>
+
+<p>
+This book probably won't help you. Pierre is probably totally correct, and you
+need to really stare at the problems hard until you just get them. Nevertheless,
+this book is an attempt at understanding proof.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Sources</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+\label{sources}
+</p>
+
+<p>
+For this book I have drawn on a variety of sources, including:
+</p>
+
+<ul class="org-ul">
+<li>Spivak's "Calculus"
+</li>
+<li>Trench's "Introduction to Real Analysis"
+</li>
+<li>Axler's "Linear Algebra Done Right"
+</li>
+<li>Lay's "Linear Algebra and its Applications"
+</li>
+<li>Beezer's "A First Course in Linear Algebra"
+</li>
+<li>Pierre Portal's own Calculus notes for 2013
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> <span class="todo TODO">TODO</span> Basics of Number Theory</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+\label{number-theory}
+</p>
+
+<p>
+Before we can understand how functions of numbers work, we must first understand numbers.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> <span class="todo TODO">TODO</span> Basics of Linear Algebra</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+\label{linear-algebra}
+Because Linear Algebra really doesn't need several semesters. It's syntax.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Vectors</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+\label{vectors}
+</p>
+
+<p>
+On a real number line, we can describe any point by a single number. In more
+than one dimension, to describe a point, we need more than a single number. In
+2D space (\(\mathbb{R}^2\)), we conventionally denote points by their \(x\) and \(y\)
+coordinates.
+\[ (x, y) \in \mathbb{R}^2
+\]
+</p>
+
+<p>
+In three dimensions, we'd have three coordinates, and in higher dimensional
+space we'd need even more. (We actually mean a vector space: see
+\nameref{vector-spaces}).
+</p>
+
+<p>
+We can define vectors as a tuple (fixed collection) of numbers, or in other
+forms. The following is <i>column vector</i> \index{column vector} form.
+\[ \begin{bmatrix}
+x_1 \\ \vdots \\ x_n
+\end{bmatrix} \in \mathbb{R}^n \]
+</p>
+
+<p>
+There is also row vector form, which is much the same, except horizontally.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> <span class="todo TODO">TODO</span> Vector Operations</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+We can perform operations on these points, like adding them together, which
+is pretty much what you expect.
+\[ (x_1, y_1) + (x_2, y_2) = (x_1 + x_2, y_1 + y_2) \in \mathbb{R}^2
+\]
+</p>
+
+<p>
+Subtraction is quite similar.
+</p>
+
+<p>
+There are a few slightly more interesting operations on vectors we can
+define. For example, what is the product of two multidimensional numbers? Does
+it make sense to multiply \((3, 9)\) by \(2\)? What about \((1, 2) \times (3, 4, 5)\)?
+</p>
+
+<p>
+The notion of a multi-dimensional product isn't immediately obvious, but we have
+at our disposal one useful notion, the <i>vector dot product</i>, which is the
+sum of the product of every component of a vector:
+\[\begin{bmatrix} 1 \\ 3 \end{bmatrix} . \begin{bmatrix} 2 \\ 0 \end{bmatrix}
+  = 1 \times 2 + 3 \times 0 = 2
+\]
+</p>
+
+<p>
+This takes two vectors in the same space and returns a real number. For
+applications of the dot product, we have ??????????????????????????????????
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> <span class="todo TODO">TODO</span> Vector Spaces</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+\label{vector-spaces}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> <span class="todo TODO">TODO</span> Matrices</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+\label{matrices}
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> <span class="todo TODO">TODO</span> Sequences and Series</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+To be continued&#x2026;
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> <span class="todo TODO">TODO</span> Single-variable calculus in one dimension (The Basics)</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+What is calculus, and why do we study it?
+</p>
+
+<p>
+The mathematical areas of study that most people mean when they say "calculus"
+are the integral and differential calculus: the study of how functions change
+and the areas of functions.
+</p>
+</div>
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> <span class="todo TODO">TODO</span> Continuity in one dimension</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+\label{continuity}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> <span class="todo TODO">TODO</span> Limits in one dimension</h3>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> <span class="todo TODO">TODO</span> Differential Calculus in one dimension</h3>
+</div>
+
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> <span class="todo TODO">TODO</span> Integral Calculus in one dimension</h3>
+</div>
+
+<div id="outline-container-sec-5-5" class="outline-3">
+<h3 id="sec-5-5"><span class="section-number-3">5.5</span> <span class="todo TODO">TODO</span> Intermediate Value Theorem in one dimension</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+\label{ivt}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-6" class="outline-3">
+<h3 id="sec-5-6"><span class="section-number-3">5.6</span> <span class="todo TODO">TODO</span> Mean Value Theorem in one dimension</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+\label{mvt}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-7" class="outline-3">
+<h3 id="sec-5-7"><span class="section-number-3">5.7</span> <span class="todo TODO">TODO</span> Generalised Mean Value Theorem in one dimension</h3>
+<div class="outline-text-3" id="text-5-7">
+<p>
+\label{gmvt}
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> <span class="todo TODO">TODO</span> Single-variable calculus in multiple dimensions (\(\mathbb{R} \to \mathbb{R}^n\))</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+\label{one-to-many-calculus}
+</p>
+
+<p>
+One-variable calculus in multiple dimensions is not particularly
+terrifying. From Linear Algebra, we already know that a function from
+\(\mathbb{R} \to \mathbb{R}^n\) will have a one-dimensional column space and a
+very large null space, so there is really only one dimension of information we
+need to work with.
+</p>
+
+<p>
+It may be beneficial to treat multi-dimensional real numbers as vectors, or
+tuples of numbers.
+</p>
+</div>
+
+<div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Norm and properties of numbers in \(\mathbb{R}^n\)</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Requires: \nameref{number-theory}, \nameref{vectors}
+</p>
+
+<p>
+We need a property of distance in multi-dimensional space, or a vector
+space. The one we shall use for this section is the standard Euclidean norm,
+which is a generalisation of the one-dimensional absolute value. We denote the
+norm of a vector as such:
+\[\forall (x_1, \dots, x_n) \in \mathbb{R}^n \quad
+  \norm{(x_1, \dots, x_n)} := \left(\sum_{j=1}^n x_j^2\right)^{1/2}
+\]
+</p>
+
+<p>
+That is to say, the norm of a vector is defined as the square root of the sum
+the squares of its individual components.
+</p>
+
+<p>
+The important thing to note is that the norm has the property that whenever two
+points are together in multi-dimensional space (their coordinates are close to
+each other), then we have that the norm of their difference will be small.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> <span class="todo TODO">TODO</span> Continuity (\(\mathbb{R} \to \mathbb{R}^n\))</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+\label{one-to-many-continuity}
+</p>
+
+<p>
+Recall \nameref{continuity}. A function \(f: \mathbb{R} \to \mathbb{R}^n\) has
+continuity defined similarly, since we only have to track one input variable. It
+is continuous at point \(t \in \mathbb{R}\) if:
+</p>
+
+<p>
+\[ \forall \epsilon > 0,\ \exists \delta > 0,\ |h| < \delta \Rightarrow
+   \norm{f(t+h) - f(t)} < \epsilon
+\]
+</p>
+
+<p>
+That is to say, for any error (\(\epsilon\)), there is a difference such that
+whenever we shift the input of the function by an amount (\(h\)) smaller than that
+distance (\(\delta\)), our function error will be smaller. We can always move
+closer and closer to our point, with the error decreasing.
+</p>
+
+<p>
+What does the second term mean, specifically?
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> <span class="todo TODO">TODO</span> Differential Calculus (\(\mathbb{R} \to \mathbb{R}^n\))</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+\label{one-to-many-differential}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> <span class="todo TODO">TODO</span> Integral Calculus (\(\mathbb{R} \to \mathbb{R}^n\))</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+\label{one-to-many-integral}
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> <span class="todo TODO">TODO</span> Multi-variable calculus in one dimension</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+\label{many-to-one-calculus}
+</p>
+</div>
+
+<div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> <span class="todo TODO">TODO</span> Arc Length and Curvature</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+\label{arc-length} \label{curvature}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> <span class="todo TODO">TODO</span> Differentiability \(\mathbb{R}^n \to \mathbb{R}\)</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Requires: linear maps, matrices
+</p>
+</div>
+
+<div id="outline-container-sec-7-2-1" class="outline-4">
+<h4 id="sec-7-2-1"><span class="section-number-4">7.2.1</span> <span class="todo TODO">TODO</span> Linearity of differentiability</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<p>
+Let \(f, g: \mathbb{R}^n \to \mathbb{R}\) be differentiable at \(x \in \mathbb{R}^n\). Let \(\lambda \in
+\mathbb{R}\). Then:
+</p>
+
+<ol class="org-ol">
+<li>\(f + \lambda g\) is differentiable at \(x \in \mathbb{R}^n\) and \(d_x(f + \lambda g) =
+   d_x f + \lambda d_xg\)
+</li>
+<li>\(f.g\) is differentiable at \(x \in \mathbb{R}^n\) and \(d_x(f.g) = f(x)d_xg + g(x)d_xf\)
+</li>
+</ol>
+
+<p>
+\(f . g\) is function multiplication.
+</p>
+
+<p>
+<b>PROOF</b> here goes helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+</p>
+</div>
+</div>
+<div id="outline-container-sec-7-2-2" class="outline-4">
+<h4 id="sec-7-2-2"><span class="section-number-4">7.2.2</span> <span class="todo TODO">TODO</span> Chain rule</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<p>
+Let \(f: \mathbb{R}^n \to \mathbb{R}\) and \(g: \mathbb{R} \to \mathbb{R}^n\), and
+we have \(x\) such that \(g\) is differentiable at \(t \in \mathbb{R}\) and \(f\) is
+differentiable at the point \(g(t) \in \mathbb{R}^n\).
+</p>
+
+<p>
+Let \(h: \mathbb{R} \to \mathbb{R}, t \mapsto f(g(t))\)
+</p>
+
+<p>
+Then \(h\) if differentiable at \(t \in \mathbb{R}\) and we have:
+</p>
+\begin{equation*}
+h'(t) = d_{g(t)}f(g'(t))
+\end{equation*}
+</div>
+</div>
+<div id="outline-container-sec-7-2-3" class="outline-4">
+<h4 id="sec-7-2-3"><span class="section-number-4">7.2.3</span> <span class="todo TODO">TODO</span> Differentiability, again</h4>
+<div class="outline-text-4" id="text-7-2-3">
+<p>
+Requires: Mean Value Theorem, multivariable differentibility
+</p>
+
+<p>
+Let \(f: \mathbb{R}^n \to \mathbb{R}\) and \(x \in \mathbb{R}^n\).
+</p>
+
+<p>
+Assume that \(f\) admits partial derivatives at \(x \in \mathbb{R}^n\) and \(\exists R > 0,
+\forall j = 1 .. n, \partial_{x_j}f\) is continuous. in something something
+something HELP
+</p>
+</div>
+</div>
+<div id="outline-container-sec-7-2-4" class="outline-4">
+<h4 id="sec-7-2-4"><span class="section-number-4">7.2.4</span> <span class="todo TODO">TODO</span> Applications of Differentiation (Optimisation)</h4>
+<div class="outline-text-4" id="text-7-2-4">
+<p>
+<b>Definition</b>: Let \(f: \mathbb{R}^n \to \mathbb{R}\) and \(x \in \mathbb{R}^n\).
+</p>
+<ul class="org-ul">
+<li>\(x\) is a local minimum of \(f\) if \(\exists R > 0.\ \forall y \in B(x, R).\ f(y)
+  \geq f(x)\).
+</li>
+<li>\(x\) is a local maximum of \(f\) if \(\exists R > 0.\ \forall y \in B(x, R).\ f(y)
+  \leq f(x)\).
+</li>
+</ul>
+
+<p>
+Assume that \(f\) is differentiable and that \(x\) is either a local maximum or a
+local minimum. Then \(d_xf = 0\). The linear map is one that sends every point to
+zero, and all the partial derivatives are zero.
+</p>
+
+<p>
+<b>Proof</b>:
+</p>
+
+<p>
+Let \(j \in \{1..n\}\). Define \(h: \mathbb{R} \to \mathbb{R}, t \mapsto f(x + t_{e_j})\). Assume
+that \(x\) s a local minimum of \(f\) in \(B(x, R)\). Then
+\(\forall t \in [-R, R), h(t) = f(x + t_{e_j}) \geq f(x)\) and \(\norm{x + t_{e_j} -
+x} = \norm{t} < R\), so \(x + t_{e_j} \in B(x, R)\).
+</p>
+
+<p>
+So \(x\) is a minimum of \(f.h\).
+</p>
+
+\begin{align*}
+h'(0) &= 0 \\
+0 = h'(0) &= \lim_{t \to 0} \frac{f(x + t_{e_j}) - f(x)}{t} = \partial_{x_j}f(x)
+\end{align*}
+<p>
+Therefore \(\nabla f(x) = 0\) and \(d_xf(z) = 0 . z = 0 \quad \forall z \in \mathbb{R}^n\).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> <span class="todo TODO">TODO</span> Example</h3>
+<div class="outline-text-3" id="text-7-3">
+\begin{align*}
+f: & \mathbb{R}^2 \to \mathbb{R} \\
+& (x, y) \mapsto \exp(y^2 x^2)
+\end{align*}
+<p>
+\(f\) is differentiable since \(\partial_xf, \partial_yf\) are continuous as products
+and compositions of continuous functions.
+</p>
+
+<p>
+This is the differential. The differential is the linear map that gives the best
+first-order approximation.
+</p>
+\begin{align*}
+d_{(x, y)}f: & \mathbb{R}^2 \to \mathbb{R} \\
+& (z_1, z_2) \mapsto \nabla f(x, y) . (z_1, z_2) = exp(y^3 x^2) [2xy^2z_1 + 3y^3x^2z_2]
+\end{align*}
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> <span class="todo TODO">TODO</span> Advanced Linear Algebra</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Requires: \nameref{linear-algebra}
+</p>
+
+<p>
+We now move to the applications of linear algebra, studying properties of
+matrices and vectors in finite-dimensional space.
+</p>
+</div>
+
+<div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> <span class="todo TODO">TODO</span> Eigenvectors and Eigenvalues</h3>
+</div>
+
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> <span class="todo TODO">TODO</span> Diagonalisation</h3>
+</div>
+
+<div id="outline-container-sec-8-3" class="outline-3">
+<h3 id="sec-8-3"><span class="section-number-3">8.3</span> <span class="todo TODO">TODO</span> Jordan Canonical Form</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Nathan Yong &lt;u5355375@anu.edu.au&gt;</p>
+<p class="date">Created: 2013-10-15 Tue 12:18</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.1)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
