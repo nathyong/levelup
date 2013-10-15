@@ -1,6 +1,5 @@
 #+TITLE: How To Level Up
 #+AUTHOR: Nathan Yong <u5355375@anu.edu.au>
-#+CATEGORY: rainyday
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
 #+LATEX_HEADER: \usepackage{fontspec}
@@ -13,12 +12,9 @@
 #+LATEX_HEADER: \usepackage{makeidx}
 #+LATEX_HEADER: \makeindex
 
-#+BEGIN_LaTeX
-\newcommand{\lra}{\leftrightarrow}
-\newcommand{\ra}{\rightarrow}
-\newcommand{\Ra}{\Rightarrow}
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-#+END_LaTeX
+\( \newcommand{\norm}[1]{\lVert #1 \rVert}
+   \newcommand{\abs}[1]{\lvert #1 \rvert}
+\)
 
 Don't pay attention to the number values. They're liable to change at any time.
 
@@ -186,8 +182,9 @@ each other), then we have that the norm of their difference will be small.
 Recall \nameref{continuity}. A function $f: \mathbb{R} \to \mathbb{R}^n$ has
 continuity defined similarly, since we only have to track one input variable. It
 is continuous at point $t \in \mathbb{R}$ if:
-\[ \forall \epsilon > 0,\ \exists \delta > 0,\ |h| < \delta \Ra \norm{f(t+h) -
-f(t)} < \epsilon
+
+\[ \forall \epsilon > 0,\ \exists \delta > 0,\ |h| < \delta \Rightarrow
+   \norm{f(t+h) - f(t)} < \epsilon
 \]
 
 That is to say, for any error ($\epsilon$), there is a difference such that
