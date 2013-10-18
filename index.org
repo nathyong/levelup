@@ -1,4 +1,37 @@
 #+TITLE: How To Level Up
-#+AUTHOR: Nathan Yong <u5355375@anu.edu.au>
+#+OPTIONS: toc:nil
 
-$13$
+* Introduction
+Pierre Portal, my first year Calculus/Analysis lecturer, described understanding
+mathematics in several levels, from zero to three.
+
+- Level Zero: you fell asleep in the lecture, and know nothing.
+- Level One: you know the formulas, and can apply them to examples.
+- Level Two: you understand the formula, and have an intuition of why it
+  works. You might be able to extend your knowledge of the formula to a related
+  use case.
+- Level Three: you understand the formula from a mathematical level, and you can
+  prove it. You might be able to extend your knowledge of the formula to derive
+  more complicated proofs and properties of mathematical objects you know
+  about.
+
+That's the title of this book explained. Introductory mathematics courses might
+teach content at Level 1 or Level 2. High achieving high school
+mathematics students might wish to understand content at Level 2. But in order
+to get to serious concepts in maths, it becomes increasingly necessary to
+understand at Level 3. This book is, then, an attempt to help you 'level up'.
+
+This book probably won't help you. Pierre is probably totally correct, and you
+need to really stare at the problems hard until you just get them. Nevertheless,
+this book is an attempt at understanding proof.
+
+* Sources
+For this book I have drawn on a variety of sources, including:
+
+- Spivak's "Calculus"
+- Trench's "Introduction to Real Analysis"
+- Axler's "Linear Algebra Done Right"
+- Lay's "Linear Algebra and its Applications"
+- Beezer's "A First Course in Linear Algebra"
+- Pierre Portal's own Calculus notes for 2013
+

@@ -1,0 +1,15 @@
+#+TITLE: Linear Algebra Part II
+
+Requires: [[file:basic-linear-algebra.org][Linear Algebra Part I]]
+
+We now move to the applications of linear algebra, studying properties of
+matrices and vectors in finite-dimensional space.
+
+* TODO Eigenvectors and Eigenvalues
+
+* TODO Diagonalisation
+
+* TODO Jordan Canonical Form
+
+* TODO Orthogonality
+Does this really belong in this section?

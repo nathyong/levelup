@@ -1,0 +1,90 @@
+#+TITLE: Multivariate Calculus
+
+* TODO Differential Calculus
+\label{many-to-one-calculus}
+
+** TODO Arc Length and Curvature
+\label{arc-length} \label{curvature}
+
+** TODO Differentiability $\mathbb{R}^n \to \mathbb{R}$
+Requires: linear maps, matrices
+
+*** TODO Linearity of differentiability
+Let $f, g: \mathbb{R}^n \to \mathbb{R}$ be differentiable at $x \in \mathbb{R}^n$. Let $\lambda \in
+\mathbb{R}$. Then:
+
+1. $f + \lambda g$ is differentiable at $x \in \mathbb{R}^n$ and $d_x(f + \lambda g) =
+   d_x f + \lambda d_xg$
+2. $f.g$ is differentiable at $x \in \mathbb{R}^n$ and $d_x(f.g) = f(x)d_xg + g(x)d_xf$
+
+$f . g$ is function multiplication.
+
+*PROOF* here goes helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+*** TODO Chain rule
+Let $f: \mathbb{R}^n \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}^n$, and
+we have $x$ such that $g$ is differentiable at $t \in \mathbb{R}$ and $f$ is
+differentiable at the point $g(t) \in \mathbb{R}^n$.
+
+Let $h: \mathbb{R} \to \mathbb{R}, t \mapsto f(g(t))$
+
+Then $h$ if differentiable at $t \in \mathbb{R}$ and we have:
+\begin{equation*}
+h'(t) = d_{g(t)}f(g'(t))
+\end{equation*}
+
+*** TODO Differentiability, again
+Requires: Mean Value Theorem, multivariable differentibility
+
+Let $f: \mathbb{R}^n \to \mathbb{R}$ and $x \in \mathbb{R}^n$.
+
+Assume that $f$ admits partial derivatives at $x \in \mathbb{R}^n$ and $\exists R > 0,
+\forall j = 1 .. n, \partial_{x_j}f$ is continuous. in something something
+something HELP
+
+*** TODO Applications of Differentiation (Optimisation)
+*Definition*: Let $f: \mathbb{R}^n \to \mathbb{R}$ and $x \in \mathbb{R}^n$.
+- $x$ is a local minimum of $f$ if $\exists R > 0.\ \forall y \in B(x, R).\ f(y)
+  \geq f(x)$.
+- $x$ is a local maximum of $f$ if $\exists R > 0.\ \forall y \in B(x, R).\ f(y)
+  \leq f(x)$.
+
+Assume that $f$ is differentiable and that $x$ is either a local maximum or a
+local minimum. Then $d_xf = 0$. The linear map is one that sends every point to
+zero, and all the partial derivatives are zero.
+
+*Proof*:
+
+Let $j \in \{1..n\}$. Define $h: \mathbb{R} \to \mathbb{R}, t \mapsto f(x + t_{e_j})$. Assume
+that $x$ s a local minimum of $f$ in $B(x, R)$. Then
+$\forall t \in [-R, R), h(t) = f(x + t_{e_j}) \geq f(x)$ and $\norm{x + t_{e_j} -
+x} = \norm{t} < R$, so $x + t_{e_j} \in B(x, R)$.
+
+So $x$ is a minimum of $f.h$.
+
+\begin{align*}
+h'(0) &= 0 \\
+0 = h'(0) &= \lim_{t \to 0} \frac{f(x + t_{e_j}) - f(x)}{t} = \partial_{x_j}f(x)
+\end{align*}
+Therefore $\nabla f(x) = 0$ and $d_xf(z) = 0 . z = 0 \quad \forall z \in \mathbb{R}^n$.
+
+** TODO Example
+\begin{align*}
+f: & \mathbb{R}^2 \to \mathbb{R} \\
+& (x, y) \mapsto \exp(y^2 x^2)
+\end{align*}
+$f$ is differentiable since $\partial_xf, \partial_yf$ are continuous as products
+and compositions of continuous functions.
+
+This is the differential. The differential is the linear map that gives the best
+first-order approximation.
+\begin{align*}
+d_{(x, y)}f: & \mathbb{R}^2 \to \mathbb{R} \\
+& (z_1, z_2) \mapsto \nabla f(x, y) . (z_1, z_2) = exp(y^3 x^2) [2xy^2z_1 + 3y^3x^2z_2]
+\end{align*}
+
+* Integral Calculus
+Lots of rectangles.
+
+** Integrability
+Let $\product_{j=1}^n [a_j, b_j]$ be a rectangle in $\mathbb{R}$
