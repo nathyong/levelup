@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Linear Algebra Part II</title>
-<!-- 2013-10-19 Sat 00:29 -->
+<!-- 2013-10-22 Tue 17:54 -->
 <meta  charset="utf-8">
 <meta  name="generator" content="Org-mode">
 <link rel="stylesheet" href="static/style.css" type="text/css">
@@ -52,14 +52,63 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+            config: ["MMLorHTML.js"], jax: ["input/TeX"],
+        //  jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
 <div id="org-div-home-and-up">
  <a accesskey="h" href=""> UP </a>
  |
- <a accesskey="H" href="/"> HOME </a>
+ <a accesskey="H" href="index.html"> HOME </a>
 </div><div id="preamble" class="status">
-Hello hello moshi moshi ciao ciao busy busy
+<a href="number-theory-1.html">Num1</a>
+<a href="number-theory-2.html">Num2</a>
+<a href="sequences-and-series.html">S&amp;S</a>
+<a href="linear-algebra-1.html">LA1</a>
+<a href="linear-algebra-2.html">LA2</a>
+<a href="calculus.html">C(SV)</a>
+<a href="multivariate-calculus-1.html">C(MV)1</a>
+<a href="multivariate-calculus-2.html">C(MV)2</a>
 </div>
 <div id="content">
 <h1 class="title">Linear Algebra Part II</h1>
@@ -75,7 +124,7 @@ Hello hello moshi moshi ciao ciao busy busy
 </div>
 </div>
 <p>
-Requires: <a href="basic-linear-algebra.html">Linear Algebra Part I</a>
+Requires: <a href="linear-algebra-1.html">Linear Algebra Part I</a>
 </p>
 
 <p>
@@ -101,6 +150,27 @@ matrices and vectors in finite-dimensional space.
 <p>
 Does this really belong in this section?
 </p>
+
+<p>
+Orthogonality is an abstraction over the concept of 'perpendicular-ness'.
+</p>
+
+<p>
+<code>Lv3</code>
+</p>
+
+<ul class="org-ul">
+<li>The inner product of two vectors is defined as
+  \[< \vec{v}, \vec{u} > = \sum_{j=1}^n u_j \overline{v}_j
+  \]
+</li>
+<li>Two vectors are orthogonal if \(< \vec{v}, \vec{u} > = 0\).
+</li>
+<li>A set of vectors is orthogonal if every vector in the set is orthogonal to
+every other vector (pairwise orthogonal).
+</li>
+<li></li>
+</ul>
 </div>
 </div>
 </div>
