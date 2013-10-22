@@ -3,7 +3,6 @@
 Because Linear Algebra really doesn't need several semesters. It's syntax.
 
 * Vectors
-
 On a real number line, we can describe any point by a single number. In more
 than one dimension, to describe a point, we need more than a single number. In
 2D space ($\mathbb{R}^2$), we conventionally denote points by their $x$ and $y$

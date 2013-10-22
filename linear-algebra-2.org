@@ -1,6 +1,6 @@
 #+TITLE: Linear Algebra Part II
 
-Requires: [[file:basic-linear-algebra.org][Linear Algebra Part I]]
+Requires: [[file:linear-algebra-1.org][Linear Algebra Part I]]
 
 We now move to the applications of linear algebra, studying properties of
 matrices and vectors in finite-dimensional space.
@@ -13,3 +13,15 @@ matrices and vectors in finite-dimensional space.
 
 * TODO Orthogonality
 Does this really belong in this section?
+
+Orthogonality is an abstraction over the concept of 'perpendicular-ness'.
+
+~Lv3~
+
+- The inner product of two vectors is defined as
+  \[< \vec{v}, \vec{u} > = \sum_{j=1}^n u_j \overline{v}_j
+  \]
+- Two vectors are orthogonal if $< \vec{v}, \vec{u} > = 0$.
+- A set of vectors is orthogonal if every vector in the set is orthogonal to
+  every other vector (pairwise orthogonal).
+-
