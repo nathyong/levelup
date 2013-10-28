@@ -1,6 +1,7 @@
 #content {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     border-left: #000 1px dotted;
     border-right: #000 1px dotted;
+    padding: 25px;
 }
