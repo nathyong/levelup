@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Multivariate Calculus \(\mathbb{R} \to \mathbb{R}^n\)</title>
-<!-- 2013-10-23 Wed 11:57 -->
+<!-- 2013-11-01 Fri 22:50 -->
 <meta  charset="utf-8">
 <meta  name="generator" content="Org-mode">
 <link rel="stylesheet" href="static/style.css" type="text/css">
@@ -129,13 +129,20 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#sec-4">Integral Calculus (\(\mathbb{R} \to \mathbb{R}^n\))</a></li>
-<li><a href="#sec-5">Integral Calculus on a Line</a></li>
+<li><a href="#sec-5">Integral Calculus on a Curve</a>
+<ul>
+<li><a href="#sec-5-1"><code>Lv1</code></a></li>
+<li><a href="#sec-5-2"><code>Lv2</code></a></li>
+<li><a href="#sec-5-3"><code>Lv3</code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <p>
 \( \newcommand{\norm}[1]{\lVert #1 \rVert}
    \newcommand{\abs}[1]{\lvert #1 \rvert}
+   \newcommand{\C}{\mathcal{C}}
 \)
 </p>
 
@@ -256,11 +263,76 @@ we might want it to be.
 </div>
 </div>
 <div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="todo TODO">TODO</span> Integral Calculus on a Line</h2>
+<h2 id="sec-5"><span class="todo TODO">TODO</span> Integral Calculus on a Curve</h2>
 <div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><code>Lv1</code></h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
-Arc length parametrisation and other horrible weird things.
+Another way of looking at a functions \(\mathbb{R} \to \mathbb{R}^n\) is to view
+them as functions that draw lines, or curves, in multi-dimensional
+space.
 </p>
+
+<p>
+Let's call our curve \(\C\).
+</p>
+
+<p>
+\[ \C = \{ f(t) | t \in [a, b] \} \]
+</p>
+
+<p>
+This means that our curve \(\mathcal{C}\) is described by the set of all points
+that are the result of the function \(f : \mathbb{R} \to \mathbb{R}^n\) over the
+interval \([a, b]\).
+</p>
+
+<p>
+The length of this curve is:
+\[ \abs{\C} := \int_a^b \norm{f'(t)} dt \]
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><code>Lv2</code></h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Our integral on the curve will no longer be about area, but about length.
+</p>
+
+<p>
+Just as the Riemann integral approximated the area underneath a curve by summing
+up many little rectangles, the idea behind integration on a curve is to find the
+length of the curve by drawing many small line segments.
+</p>
+
+<p>
+If we add enough of them together, we can estimate the length of the curve
+through an integral. But which integral?
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><code>Lv3</code></h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Suppose our 'curve' is actually just a line:
+</p>
+
+<p>
+\[ \C = \{ X + t(Y - X) | t \in [0, 1] \} \quad X, Y \in \mathbb{R}^n \]
+</p>
+
+<p>
+So our line is between \(X\) and \(Y\). In that case the length is just the norm of
+the distance:
+</p>
+
+<p>
+\[ \abs{\C} = \norm{X - Y} =  \left(\sum_{j=1}^n (x_j - y_j)^2\right)^{1/2} \]
+</p>
+</div>
 </div>
 </div>
 </div>
